@@ -1,32 +1,38 @@
-let delivery = prompt("Выберите страну доставки");
-
-let price; //undefind
+const delivery = prompt("Выберите страну доставки");
+const PRICE_CHINA = 100;
+const PRICE_CHILE = 250;
+const PRICE_AVSTRALIYA = 100;
+const PRICE_INDIYA = 100;
+const PRICE_JAMAYKA = 100;
 if (delivery !== null) {
-  console.log((delivery = delivery.toLowerCase()));
-  switch (delivery) {
+  switch (delivery.toLowerCase()) {
     case "китай":
-      price = 100;
+      alert(
+        `Доставка в ${delivery.toLowerCase()} будет стоить ${PRICE_CHINA} кредитов`
+      );
       break;
     case "чили":
-      price = 250;
+      alert(
+        `Доставка в ${delivery.toLowerCase()} будет стоить ${PRICE_CHILE} кредитов`
+      );
       break;
     case "австралия":
-      price = 170;
+      alert(
+        `Доставка в ${delivery.toLowerCase()} будет стоить ${PRICE_AVSTRALIYA} кредитов`
+      );
       break;
     case "индия":
-      price = 80;
+      alert(
+        `Доставка в ${delivery.toLowerCase()} будет стоить ${PRICE_INDIYA} кредитов`
+      );
       break;
     case "ямайка":
-      price = 120;
+      alert(
+        `Доставка в ${delivery.toLowerCase()} будет стоить ${PRICE_JAMAYKA} кредитов`
+      );
       break;
-  }
 
-  if (price !== undefined) {
-    delivery = delivery.charAt(0).toUpperCase() + delivery.slice(1);
-    alert(`Доставка в ${delivery} будет стоить ${price} кредитов`);
-  } else {
-    alert("В вашей стране доставка не доступна");
+    default:
+      alert("В вашей стране доставка не доступна");
   }
-} else {
-  console.log("Отменено пользователем");
 }

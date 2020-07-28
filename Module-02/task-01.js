@@ -15,7 +15,7 @@ const logItems = function (array) {
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
-console.log("Насало програмы");
+console.log("Начало програмы");
 console.log(
   'первый вызов logItems(["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"]);'
 );
