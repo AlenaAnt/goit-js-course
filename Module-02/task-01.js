@@ -1,15 +1,12 @@
 const logItems = function (array) {
-  if (Array.isArray(array)) {
-    for (let i = 0; i < array.length; i++) {
-      // console.log(array[i]);
-      // console.log(i);
-      // console.log(i + " - " + array[i]);
-      console.log(`${i} - ${array[i]}`);
-    }
-  } else {
-    console.log("Это не массив");
+  for (let i = 1; i < array.length; i++) {
+    // console.log(array[i]);
+    // console.log(i);
+    // console.log(i + " - " + array[i]);
+    console.log(`${i} - ${array[i]}`);
   }
 };
+
 //for (let i=0; i<10; i++){}
 //for (let element to array){}
 /*

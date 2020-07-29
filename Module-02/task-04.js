@@ -1,8 +1,5 @@
-const formatString = function (string, TEST = "DFCZ") {
-  if (string.length > 40) {
-    return string.substr(0, 40) + "...";
-  }
-  return string;
+const formatString = function (string) {
+  string.length > 40 ? return `${string.slice(0, 40)} ...` : return string;
 };
 
 /*
