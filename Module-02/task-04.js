@@ -1,14 +1,6 @@
 const formatString = function (string) {
-  if (string.length > 40) {
-    return string.substr(0, 40) + "...";
-  }
-  return string;
+  return string.length > 40 ? `${string.slice(0, 40)} ...` : string;
 };
-
-// Тернарник не работает с return
-// const formatString = function (string) {
-//   string.length > 40 ? return `${string.slice(0, 40)} ...` : return string;
-// };
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
