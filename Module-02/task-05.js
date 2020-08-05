@@ -1,12 +1,9 @@
 const checkForSpam = function (message) {
-  if (message.toLowerCase().includes(spam)) {
-    return true;
-  }
-  if (message.toLowerCase().includes(sale)) {
-    return true;
-  }
-  //выход
-  return resault;
+  let resault;
+  return (
+    message.toLowerCase().includes("spam") ||
+    message.toLowerCase().includes("sale")
+  );
 };
 
 /*

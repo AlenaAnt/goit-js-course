@@ -5,16 +5,17 @@ do {
   input = prompt("Введите число");
 
   if (input !== null) {
-    if (!Number.isNaN(parseInt(input))) {
-      numbers.push(parseInt(input));
-    } else {
+    if (Number.isNaN(+input)) {
       alert("Было введено не число, попробуйте еще раз");
       continue;
     }
+    numbers.push(+input);
   }
 } while (input === null);
 
-for (const element of numbers) {
-  total += element;
+if (numbers.length !== 0) {
+  for (const element of numbers) {
+    total += element;
+  }
+  console.log(`Общая сумма чисел равна ${total}`);
 }
-console.log(`'Общая сумма чисел равна ${total}'`);
