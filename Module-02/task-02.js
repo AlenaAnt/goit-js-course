@@ -2,8 +2,6 @@ const calculateEngravingPrice = function (message, pricePerWord) {
   return message.split(" ").length * pricePerWord;
 };
 
-//retern undefaind
-
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */

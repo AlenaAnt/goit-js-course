@@ -1,14 +1,9 @@
 const logItems = function (array) {
   for (let i = 1; i < array.length; i++) {
-    // console.log(array[i]);
-    // console.log(i);
-    // console.log(i + " - " + array[i]);
     console.log(`${i} - ${array[i]}`);
   }
 };
 
-//for (let i=0; i<10; i++){}
-//for (let element to array){}
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */

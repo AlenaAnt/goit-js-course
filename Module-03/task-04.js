@@ -4,7 +4,13 @@
 //    и возращает ее. Каждое поле объекта,
 //     передаваемого в функцию, имеет вид "имя":"зарплата".
 
-const countTotalSalary = function (employees) {};
+const countTotalSalary = function (employees) {
+  let total = 0;
+  for (key in employees) {
+    total += employees[key];
+  }
+  return total;
+};
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
@@ -17,6 +23,8 @@ console.log(
     poly: 150,
     alfred: 80,
   })
+
+  //
 ); // 330
 
 console.log(
