@@ -19,7 +19,9 @@ console.log(getUsersWithEyeColor(users, "blue"));
 // Получить массив имен пользователей по полу (поле gender).
 
 const getUsersWithGender = (users, gender) =>
-  users.filter((user) => user.gender === gender);
+  users
+    .filter((user) => user.gender === gender)
+    .map((user) => (user = user.name));
 console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 // Получить массив только неактивных пользователей (поле isActive).
