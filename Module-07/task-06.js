@@ -17,3 +17,14 @@ inputRef.addEventListener("blur", () => {
     inputRef.classList.add("invalid");
   }
 });
+
+inputRef.onfocus = function () {
+  if (inputRef.classList.contains("invalid")) {
+    this.classList.remove("invalid");
+    return;
+  }
+  if (inputRef.classList.contains("valid")) {
+    this.classList.remove("valid");
+    return;
+  }
+};
