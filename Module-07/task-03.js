@@ -40,12 +40,12 @@ let imagesLi = "";
 //   imagesLi += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
 // };
 // images.forEach(callback);
-images.forEach(
-  (image) =>
-    (imagesLi += `<li style="width: 33.333%; list-style: none;"><img src="${image.url}" alt="${image.alt}" style="max-width: 100%; height: auto;"></li>`)
-);
+const galleryHtml = images.reduce((imagesLi, image) => {
+  return (imagesLi += `<li style="width: 33.333%; list-style: none;">
+                  <img src="${image.url}" alt="${image.alt}" style="max-width: 100%; height: auto;"></li>`);
+}, "");
 
 const gallery = document.querySelector("#gallery");
 
-gallery.insertAdjacentHTML("beforeEnd", imagesLi);
+gallery.insertAdjacentHTML("beforeEnd", galleryHtml);
 gallery.setAttribute("style", "display: flex; justify-content: space-between;");

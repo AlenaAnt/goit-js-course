@@ -13,9 +13,9 @@ const length = inputRef.getAttribute("data-length");
 inputRef.addEventListener("blur", () => {
   if (inputRef.value.length === +length) {
     inputRef.classList.add("valid");
-  } else {
-    inputRef.classList.add("invalid");
+    return;
   }
+  inputRef.classList.add("invalid");
 });
 
 inputRef.onfocus = function () {
@@ -23,8 +23,6 @@ inputRef.onfocus = function () {
     this.classList.remove("invalid");
     return;
   }
-  if (inputRef.classList.contains("valid")) {
-    this.classList.remove("valid");
-    return;
-  }
+
+  this.classList.remove("valid");
 };

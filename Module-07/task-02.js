@@ -13,4 +13,11 @@ const ingredients = [
 //Для создания DOM-узлов используй document.createElement().
 
 const ingredientsUlRef = document.querySelector("#ingredients");
-ingredientsUlRef.innerHTML = `<li>${ingredients.join("</li><li>")}</li>`;
+
+const ingredientsHtml = ingredients.map((ingredient) => {
+  const li = document.createElement("li");
+  li.textContent = ingredient;
+  return li;
+});
+
+ingredientsUlRef.append(...ingredientsHtml);

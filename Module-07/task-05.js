@@ -6,11 +6,9 @@
 const inputRef = document.querySelector("#name-input");
 const nameInputRef = document.querySelector("#name-output");
 
-inputRef.addEventListener("input", () => {
-  nameInputRef.textContent;
-  if (inputRef.value === "") {
-    nameInputRef.textContent = "Незнакомец";
-  } else {
-    nameInputRef.textContent = inputRef.value;
-  }
-});
+inputRef.addEventListener(
+  "input",
+  () =>
+    (nameInputRef.textContent =
+      inputRef.value === "" ? "Незнакомец" : inputRef.value)
+);
