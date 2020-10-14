@@ -14,6 +14,10 @@ export default class CountdownTimer {
       secs: Math.floor((time % (1000 * 60)) / 1000),
     };
   }
+  addZero(val) {
+    let str = val + '';
+    return str.padStart(2, '0');
+  }
   startTimerData() {
     if (this._IsNoActivFlag) {
       this._IsNoActivFlag = false;
@@ -22,12 +26,15 @@ export default class CountdownTimer {
         const timerRef = document.querySelector(this._selector);
         timerRef.querySelector('[data-value="days"]').textContent =
           dataObj.days;
-        timerRef.querySelector('[data-value="hours"]').textContent =
-          dataObj.hours;
-        timerRef.querySelector('[data-value="mins"]').textContent =
-          dataObj.mins;
-        timerRef.querySelector('[data-value="secs"]').textContent =
-          dataObj.secs;
+        timerRef.querySelector(
+          '[data-value="hours"]',
+        ).textContent = this.addZero(dataObj.hours);
+        timerRef.querySelector(
+          '[data-value="mins"]',
+        ).textContent = this.addZero(dataObj.mins);
+        timerRef.querySelector(
+          '[data-value="secs"]',
+        ).textContent = this.addZero(dataObj.secs);
       }, 1000);
     }
   }

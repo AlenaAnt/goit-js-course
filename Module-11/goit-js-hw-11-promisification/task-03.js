@@ -16,7 +16,7 @@ const makeTransaction = (transaction) => {
       if (canProcess) {
         resolve({ id: transaction.id, time: delay });
       } else {
-        reject({ id: transaction.id });
+        reject(transaction.id);
       }
     }, delay);
   });
@@ -26,7 +26,7 @@ const logSuccess = ({ id, time }) => {
   console.log(`Transaction ${id} processed in ${time}ms`);
 };
 
-const logError = ({ id }) => {
+const logError = (id) => {
   console.warn(`Error processing transaction ${id}. Please try again later.`);
 };
 

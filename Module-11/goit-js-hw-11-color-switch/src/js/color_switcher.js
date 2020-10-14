@@ -20,7 +20,7 @@ let flag = true;
 const buttonStartClick = () => {
   if (flag) {
     flag = false;
-    buttonStartRef.setAttribute('disabled', true);
+    buttonStartRef.disabled = true;
     setIntervalID = setInterval(() => {
       let color = colors[randomIntegerFromInterval(0, colors.length)];
       document.body.style.backgroundColor = color;
@@ -31,7 +31,7 @@ buttonStartRef.addEventListener('click', buttonStartClick);
 
 const buttonStopClick = () => {
   clearInterval(setIntervalID);
-  buttonStartRef.removeAttribute('disabled');
+  buttonStartRef.disabled = false;
   flag = true;
 };
 buttonStopRef.addEventListener('click', buttonStopClick);
