@@ -8,10 +8,7 @@ export default function (searchQuery, page, perPageNumber) {
     .then(response => {
       return response.json();
     })
-    .then(data => {
-      console.log(data);
-      return data;
-    })
+
     .catch(error => {
       return error;
     });

@@ -48,6 +48,7 @@ body {
 .load_more {
   display: flex;
   justify-content: center;
+  opacity: 0;
 }
 button {
   outline: none;
@@ -72,8 +73,8 @@ button:active {
 .stats {
   display: flex;
   justify-content: space-evenly;
-  font-family: 'Indie Flower', cursive;
-  font-size: 24px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
   font-weight: 600;
 }
 .stats-item {
